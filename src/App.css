@@ -1,9 +1,21 @@
 body {
   font-family: "Arial", sans-serif;
+  background-color: lightgray;
 }
 
-img {
-  width: auto;
+h1,
+p {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.hangman-image {
+  width: 250px;
+  display: block;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: 10px solid white;
 }
 
 .guessed-word {
@@ -11,6 +23,7 @@ img {
   letter-spacing: 5px;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 button {
@@ -21,7 +34,7 @@ button {
 }
 
 .keyboard-button {
-  background-color: lightblue;
+  background-color: aqua;
   color: black;
   width: 30px;
 }
@@ -31,12 +44,20 @@ button {
   color: lightblue;
 }
 
-.restart-button {
-  background-color: lightgoldenrodyellow;
+.keyboard-button-clicked {
+  color: gray;
+  width: 30px;
+  cursor: not-allowed;
+}
+
+.restart-button,
+.popup button {
+  background-color: yellow;
   color: black;
 }
 
-.restart-button:hover {
+.restart-button:hover,
+.popup button:hover {
   background-color: darkgrey;
   color: lightgoldenrodyellow;
 }
@@ -49,4 +70,22 @@ button {
 .help-selected {
   background-color: darkgrey;
   color: lightgoldenrodyellow;
+}
+
+.popup {
+  position: fixed;
+  width: 300px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

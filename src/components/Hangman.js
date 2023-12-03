@@ -31,7 +31,8 @@ const Hangman = ({ incorrectGuesses }) => {
   return (
     <img
       src={stateImages[incorrectGuesses]} //the image src is the index of the number of incorrect guesses in the array
-      alt={`Hangman stage ${incorrectGuesses}`} //alt text uses the number of incorrect guesses to add the name
+      alt={`Hangman stage ${incorrectGuesses}`}
+      className="hangman-image" //alt text uses the number of incorrect guesses to add the name
     />
   );
 };
